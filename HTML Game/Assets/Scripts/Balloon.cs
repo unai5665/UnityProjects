@@ -45,7 +45,6 @@ void Start()
     // Detecta clic en el globo
     private void OnMouseDown()
 {
-    Debug.Log("Globo clickeado: " + htmlTag);  // Esto debería aparecer en la consola cuando haces clic
     if (GameManager.Instance != null)
     {
         GameManager.Instance.CatchBalloon(htmlTag); // Enviar la etiqueta al GameManager

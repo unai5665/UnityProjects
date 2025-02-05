@@ -18,13 +18,25 @@ public class TagContainer : MonoBehaviour
         {
             expectedOrder = new List<string>(GameManager.Instance.currentTags); // Sincroniza con el GameManager
         }
+        InitializeSlots();
     }
 
-     public void UpdateExpectedOrder(List<string> newOrder)
-    {
-        expectedOrder = new List<string>(newOrder); // Actualizamos la lista con el nuevo orden
-        Debug.Log("Nuevo orden de etiquetas actualizado.");
-    }
+    public void UpdateExpectedOrder(List<string> newOrder)
+{
+    // Verificar el contenido antes de la actualización
+    Debug.Log("Antes de la actualización, expectedOrder: " + string.Join(", ", expectedOrder));
+
+    // Limpiar el expectedOrder y agregar las nuevas etiquetas
+    expectedOrder.Clear();
+    expectedOrder.AddRange(newOrder);
+
+    // Imprimir el nuevo orden para ver si la actualización funcionó
+    Debug.Log("Nuevo orden de etiquetas: " + string.Join(", ", expectedOrder));
+
+    // Limpiar los slots y reiniciar
+    ClearSlots();
+    InitializeSlots();
+}
 
     
 
@@ -49,20 +61,70 @@ public class TagContainer : MonoBehaviour
         }
         else
         {
-            Debug.Log("Orden incorrecto, intenta de nuevo.");
+        
             ResetTags();
         }
     }
 
+    public bool AllSlotsFilled()
+    {
+        foreach (Slot tag in tagSlots)
+        {
+            if (tag == null) // Si hay un slot sin etiqueta, aún no está completo
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void ClearSlots()
+    {
+        foreach (Slot slot in tagSlots)
+        {
+            DraggableTag draggableTag = slot.GetComponentInChildren<DraggableTag>();
+            if (draggableTag != null)
+            {
+                Destroy(draggableTag.gameObject); // Eliminar la etiqueta dentro del slot
+            }
+        }
+    }
+
+    public void InitializeSlots()
+    {
+        for (int i = 0; i < tagSlots.Count; i++)
+        {
+            if (i < expectedOrder.Count)  // Asegura que no haya error si hay más slots que etiquetas
+            {
+                tagSlots[i].expectedTag = expectedOrder[i]; // Asigna la etiqueta esperada al slot
+            
+            }
+            else
+            {
+                tagSlots[i].expectedTag = null;  // Si hay más slots que etiquetas, vacíalos
+            }
+        }
+    }
+
+
+
+
+
+
 
     public void ResetTags()
     {
-        foreach (Transform child in tagContainerPanel)
+        foreach (Slot slot in tagSlots)
         {
-            Destroy(child.gameObject);  // Eliminar todos los tags previos
+            DraggableTag draggableTag = slot.GetComponentInChildren<DraggableTag>(); // Obtener la etiqueta dentro del slot
+
+            if (draggableTag != null) 
+            {
+                draggableTag.ResetPosition(); // Devolver solo las etiquetas que estén en un slot
+            }
         }
-        
     }
+
 
     public void AddTagToUI(string tag)
     {

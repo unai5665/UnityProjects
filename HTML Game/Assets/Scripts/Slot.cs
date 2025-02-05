@@ -17,17 +17,19 @@ public class Slot : MonoBehaviour, IDropHandler
 
         if (draggedTag != null)
         {
-            Debug.Log("Tag arrastrada detectada: " + draggedTag.GetTag());
+            
 
             if (draggedTag.GetTag() == expectedTag) // Si la etiqueta coincide
             {
                 draggedTag.transform.SetParent(transform);
+
                 draggedTag.transform.localPosition = Vector3.zero;
+                
                 Debug.Log("Etiqueta colocada en el slot correctamente.");
 
                 // Verifica el orden después de colocar la etiqueta
-                TagContainer tagContainer = FindObjectOfType<TagContainer>();
-                if (tagContainer != null)
+               TagContainer tagContainer = FindObjectOfType<TagContainer>();
+                if (tagContainer != null && tagContainer.AllSlotsFilled())  
                 {
                     tagContainer.CheckOrder();
                 }
@@ -37,10 +39,6 @@ public class Slot : MonoBehaviour, IDropHandler
                 Debug.Log("Etiqueta incorrecta, regresando a su posición original.");
                 draggedTag.ResetPosition();
             }
-        }
-        else
-        {
-            Debug.Log("No se detectó ninguna etiqueta arrastrada.");
         }
     }
 }
