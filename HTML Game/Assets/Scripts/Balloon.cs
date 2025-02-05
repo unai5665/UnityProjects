@@ -17,9 +17,6 @@ void Start()
     {
         textMeshPro.text = htmlTag;
     }
-
-    // Posición inicial directamente sin necesidad de SetRandomPosition()
-    transform.position = new Vector3(Random.Range(-3f, 3f), Random.Range(-6f, -3f), -5.7f);
 }
 
 
@@ -42,7 +39,7 @@ void Start()
     void Respawn()
     {
         // Cuando el globo sale de la pantalla, regresa a la parte inferior con una posición aleatoria en el eje X
-        transform.position = new Vector3(Random.Range(-3f, 3f), Random.Range( -3f, -6f), -5.7f);
+        transform.position = new Vector3(Random.Range(-2.5f, 3f), Random.Range( -3f, -6f), -5.7f);
     }
 
     // Detecta clic en el globo

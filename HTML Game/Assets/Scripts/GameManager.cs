@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private float timeLeft = 60f;
     private int score = 0;
+    
 
     void Awake()
     {
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         scoreText.text = " " + score;
         playerOrder.Clear();
-        currentTags = new List<string> { "<a>", "</a>", "<p>", "</p>" }; // Inicia con el nivel 1
+        currentTags = new List<string> { "<a>", "<p>", "</p>", "</a>" }; // Inicia con el nivel 1
         SpawnBalloons();  // Solo se llama aquí
         StartTimer();  // Comienza el contador de tiempo
     }
@@ -76,7 +77,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Asignando etiqueta al globo: " + tag);
             GameObject newBalloon = Instantiate(balloonPrefab, balloonParent);
             newBalloon.GetComponent<Balloon>().htmlTag = tag;
-            newBalloon.transform.position = new Vector3(Random.Range(-3f, 3f), Random.Range(-3f, -6f), -5.7f);
+            newBalloon.transform.position = new Vector3(Random.Range(-2.5f, 3f), Random.Range(-3f, -6f), -5.7f);
             newBalloon.transform.localScale = Vector3.one; // Asegúrate de que la escala sea normal
 
         }
@@ -86,7 +87,6 @@ public class GameManager : MonoBehaviour
     public void CatchBalloon(string tag)
     {
         playerOrder.Add(tag);
-        CheckOrder(); // Comprobar si el orden es correcto cada vez que se captura un globo
     }
 
     // Verifica si el orden de las etiquetas es correcto
@@ -108,10 +108,24 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         // Aquí definimos las nuevas etiquetas del siguiente nivel
-        currentTags = new List<string> { "<div>", "</div>", "<h1>", "</h1>" };
+        currentTags = GetNextLevelTags();
+        if (tagContainer != null)
+        {
+            tagContainer.UpdateExpectedOrder(currentTags);
+        }
+
+        // Lógica para cambiar de nivel o actualizar la UI
+        Debug.Log("Avanzando al siguiente nivel.");
         playerOrder.Clear();
         SpawnBalloons();
     }
+
+     private List<string> GetNextLevelTags()
+    {
+        // Aquí se determina cuál es el orden para el siguiente nivel (esto es solo un ejemplo)
+        return new List<string> { "Etiqueta D", "Etiqueta E", "Etiqueta F" };
+    }
+
 
     // Fin del juego, se muestra la pantalla de Game Over
     void GameOver()
@@ -136,7 +150,7 @@ public class GameManager : MonoBehaviour
     timerText.text = "Tiempo: 60"; // Asegurar que se muestre 60 antes de iniciar
 
     playerOrder.Clear();
-    currentTags = new List<string> { "<a>", "</a>", "<p>", "</p>" }; // Resetear a nivel 1
+    currentTags = new List<string> { "<a>","<p>", "</p>", "</a>"  }; // Resetear a nivel 1
 
     CleanDraggableTags(); // Llamamos a la función que borra todos los tags antes de reiniciar
 

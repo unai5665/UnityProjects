@@ -7,7 +7,7 @@ using System.Linq;
 public class TagContainer : MonoBehaviour
 {
     public List<string> expectedOrder; // Lista con el orden correcto de etiquetas
-    public List<DraggableTag> tagSlots; // Slots en el UI donde las etiquetas se colocan
+    public List<Slot> tagSlots; // Slots en el UI donde las etiquetas se colocan
     public GameManager gameManager;
     public GameObject draggableTagPrefab;  // Prefab de la etiqueta arrastrable
     public Transform tagContainerPanel; 
@@ -20,17 +20,29 @@ public class TagContainer : MonoBehaviour
         }
     }
 
+     public void UpdateExpectedOrder(List<string> newOrder)
+    {
+        expectedOrder = new List<string>(newOrder); // Actualizamos la lista con el nuevo orden
+        Debug.Log("Nuevo orden de etiquetas actualizado.");
+    }
+
     
 
     public void CheckOrder()
     {
         List<string> playerOrder = new List<string>();
 
-        foreach (DraggableTag tag in tagSlots)
+        // Recorre los slots y recoge las etiquetas que el jugador ha colocado en ellos
+        foreach (Slot slot in tagSlots)
         {
-            playerOrder.Add(tag.GetTag()); // Obtiene las etiquetas en los espacios
+            DraggableTag draggableTag = slot.GetComponentInChildren<DraggableTag>();
+            if (draggableTag != null)
+            {
+                playerOrder.Add(draggableTag.GetTag()); // Obtiene las etiquetas en los espacios
+            }
         }
 
+        // Compara el orden de las etiquetas con el esperado
         if (playerOrder.Count == expectedOrder.Count && playerOrder.SequenceEqual(expectedOrder))
         {
             gameManager.NextLevel(); // Si es correcto, pasa de nivel
@@ -41,6 +53,7 @@ public class TagContainer : MonoBehaviour
             ResetTags();
         }
     }
+
 
     public void ResetTags()
     {

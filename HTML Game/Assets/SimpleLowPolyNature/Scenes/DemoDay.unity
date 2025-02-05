@@ -2559,6 +2559,7 @@ GameObject:
   - component: {fileID: 283703137}
   - component: {fileID: 283703136}
   - component: {fileID: 283703135}
+  - component: {fileID: 283703139}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2653,6 +2654,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &283703139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283703134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc49de3c488acf4cad599754da5e94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expectedOrder:
+  - <a>
+  - <p>
+  - </p>
+  - </a>
+  tagSlots:
+  - {fileID: 1961626424}
+  - {fileID: 118297026}
+  - {fileID: 1692457560}
+  - {fileID: 297451060}
+  gameManager: {fileID: 209204818}
+  draggableTagPrefab: {fileID: 1277401567587950973, guid: 7a2671492c7ce534798bba9c52941b1b, type: 3}
+  tagContainerPanel: {fileID: 1801116313}
 --- !u!1 &291527240
 GameObject:
   m_ObjectHideFlags: 0
@@ -15725,10 +15751,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 283703138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -136.04453, y: -178}
-  m_SizeDelta: {x: -272.0891, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -136.04456, y: -174.20001}
+  m_SizeDelta: {x: 485.9109, y: 388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801116314
 MonoBehaviour:
@@ -16697,10 +16723,10 @@ MonoBehaviour:
   - </p>
   - </a>
   tagSlots:
-  - {fileID: 2223430782533853306, guid: e303ba01ed9c323b7b9ed3bd41201191, type: 3}
-  - {fileID: 2223430782533853306, guid: e303ba01ed9c323b7b9ed3bd41201191, type: 3}
-  - {fileID: 2223430782533853306, guid: e303ba01ed9c323b7b9ed3bd41201191, type: 3}
-  - {fileID: 2223430782533853306, guid: e303ba01ed9c323b7b9ed3bd41201191, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   gameManager: {fileID: 209204818}
   draggableTagPrefab: {fileID: 1277401567587950973, guid: 7a2671492c7ce534798bba9c52941b1b, type: 3}
   tagContainerPanel: {fileID: 1801116313}
