@@ -515,7 +515,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 9152008571277617976, guid: 41025a7b32e3090418b135a4be4a841d, type: 3}
-  roadCounterText: {fileID: 0}
   victoryPoint: 400
 --- !u!54 &174997437
 Rigidbody:
@@ -1017,15 +1016,15 @@ RectTransform:
   m_GameObject: {fileID: 460403177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 10, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1553221679}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.5}
-  m_SizeDelta: {x: -882, y: -339}
+  m_AnchoredPosition: {x: 1.4229126, y: 0}
+  m_SizeDelta: {x: -771.1602, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460403179
 MonoBehaviour:
@@ -2016,6 +2015,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1553221675}
   victoryScreen: {fileID: 199875873}
   scoreScreen: {fileID: 910679668}
+  scoreText: {fileID: 0}
 --- !u!4 &910509219
 Transform:
   m_ObjectHideFlags: 0
@@ -3751,7 +3751,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553221675}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

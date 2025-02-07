@@ -10,6 +10,20 @@ public class GameManager : MonoBehaviour
     public GameObject victoryScreen;  
     public GameObject scoreScreen;    
 
+    private int score = 0;
+
+    public TMPro.TextMeshProUGUI scoreText;
+
+    public void AddScore(int points)
+{
+    if (!isGameOver)
+    {
+        score += points;
+        scoreText.text = "Score: " + score;
+    }
+}
+
+
     private bool isGameOver = false; 
 
     void Start()
