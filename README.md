@@ -6,13 +6,14 @@ Este es un juego 3D desarrollado en **Unity** en el que el jugador controla un c
 
 ## Instrucciones de instalación y ejecución
 
-1\. **Clonar el repositorio**:
+1. **Clonar el repositorio**:
 
    Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal para obtener una copia del repositorio:
 
    ```bash
-
-   git clone https://github.com/unai5665/UnityProjects.git
+   git clone https://github.com/unai5665/UnityProjects.git
+   ```
+   
 
 ## Instalar dependencias:
 
@@ -52,9 +53,8 @@ Este es un juego en **Unity** donde el jugador controla un avión que debe volar
 
     Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal para obtener una copia del repositorio:
 
-    ```
+    ```bash
     git clone https://github.com/unai5665/UnityProjects.git
-
     ```
 
 ## Instalar dependencias:
@@ -187,9 +187,9 @@ El objetivo es llegar al otro lado sin ser atropellado.
 
 Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal para obtener una copia del repositorio:
 
-```bash
-git clone https://github.com/unai5665/RoadHopper.git
-```
+ ```bash
+   git clone https://github.com/unai5665/UnityProjects.git
+ ```
 
 
 ## Instalar dependencias:
@@ -215,13 +215,13 @@ Utiliza el espacio para avanzar.
 
 Interfaz
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazJuegoRanaStartScreen.PNG)
+![Interfaz](https://github.com/unai5665/Juego-de-la-rana/blob/local/StartScreen.PNG)
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazJuegoRanaMainScreen.PNG)
+![Interfaz](https://github.com/unai5665/Juego-de-la-rana/blob/local/GameScreen.PNG)
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazJuegoRanaVictoryScreen.PNG)
+![Interfaz](https://github.com/unai5665/Juego-de-la-rana/blob/local/VictoryScreen.PNG)
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazJuegoRanaGameOverScreen.PNG)
+![Interfaz](https://github.com/unai5665/Juego-de-la-rana/blob/local/GameOverScreen.PNG)
 
 
 # Juego de Etiquetas HTML en Unity
