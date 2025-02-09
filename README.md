@@ -38,7 +38,7 @@ C#: Lenguaje de programación utilizado para la lógica del juego, como el movim
 Git: Sistema de control de versiones utilizado para gestionar el código y los recursos del proyecto.
 
 ## Interfaz
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/Prototype1.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/Prototype1.PNG)
 
 # Challenge 1
 
