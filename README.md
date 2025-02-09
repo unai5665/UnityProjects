@@ -81,7 +81,7 @@ Abre el proyecto desde el editor de Unity.
 ## Interfaz
 
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazChallenge1.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/Challenge1.PNG)
 
 # Banana Shooter
 
