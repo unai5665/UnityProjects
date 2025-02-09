@@ -9,7 +9,9 @@ Este es un juego 3D desarrollado en **Unity** en el que el jugador controla un c
 1. **Clonar el repositorio**:
 
    Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal para obtener una copia del repositorio:
-
+```bash
+   git clone https://github.com/unai5665/UnityProjects.git
+   ```
    
    
 
@@ -131,8 +133,9 @@ Instrucciones de instalación y ejecución
 1. Clonar el repositorio:
 
 Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal para obtener una copia del repositorio:
-
-git clone https://github.com/unai5665/UnityProjects.git
+```bash
+   git clone https://github.com/unai5665/UnityProjects.git
+   ```
 
 Instalar dependencias:
 
