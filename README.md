@@ -12,7 +12,7 @@ Este es un juego 3D desarrollado en **Unity** en el que el jugador controla un c
 
    ```bash
    git clone https://github.com/unai5665/UnityProjects.git
-   ```
+   ``
    
 
 ## Instalar dependencias:
