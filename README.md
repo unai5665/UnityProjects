@@ -167,9 +167,9 @@ Interfaz
 
 ![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/StartScreen.PNG)
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype5MainScreen.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/GameScreen.PNG)
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype5GameOverScreen.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/GameOverScreen.PNG)
 
 
 # Juego de la Rana
