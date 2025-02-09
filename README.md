@@ -10,9 +10,7 @@ Este es un juego 3D desarrollado en **Unity** en el que el jugador controla un c
 
    Si aún no has clonado el proyecto, usa el siguiente comando en tu terminal para obtener una copia del repositorio:
 
-   ```bash
-   git clone https://github.com/unai5665/UnityProjects.git
-   ``
+   
    
 
 ## Instalar dependencias:
@@ -38,7 +36,7 @@ C#: Lenguaje de programación utilizado para la lógica del juego, como el movim
 Git: Sistema de control de versiones utilizado para gestionar el código y los recursos del proyecto.
 
 ## Interfaz
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/Prototype1.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/Prototype1.png)
 
 # Challenge 1
 
@@ -81,7 +79,7 @@ Abre el proyecto desde el editor de Unity.
 ## Interfaz
 
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazChallenge1.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazChallenge1.png)
 
 # Banana Shooter
 
@@ -120,7 +118,7 @@ Utiliza las teclas de A y D para mover el personaje y el espacio para disparar p
 - **Git**: Sistema de control de versiones utilizado para gestionar el código y los recursos del proyecto.
 
 ## Interfaz
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazPrototype2.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype2.png)
 
 Explota Pelotas
 
@@ -164,11 +162,11 @@ Git: Sistema de control de versiones utilizado para gestionar el código y los r
 
 Interfaz
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazPrototype5StartScreen.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype5StartScreen.png)
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazPrototype5MainScreen.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype5MainScreen.png)
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/master/InterfazPrototype5GameOverScreen.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype5GameOverScreen.png)
 
 
 # Juego de la Rana
