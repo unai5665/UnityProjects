@@ -120,7 +120,7 @@ Utiliza las teclas de A y D para mover el personaje y el espacio para disparar p
 - **Git**: Sistema de control de versiones utilizado para gestionar el código y los recursos del proyecto.
 
 ## Interfaz
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype2.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/Prototype2.PNG)
 
 Explota Pelotas
 
