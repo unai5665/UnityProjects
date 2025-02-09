@@ -165,7 +165,7 @@ Git: Sistema de control de versiones utilizado para gestionar el código y los r
 
 Interfaz
 
-![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype5StartScreen.png)
+![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/StartScreen.PNG)
 
 ![Interfaz](https://github.com/unai5665/UnityProjects/blob/main/InterfazPrototype5MainScreen.png)
 
